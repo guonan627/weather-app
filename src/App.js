@@ -11,13 +11,17 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      location: '',
+      location: 'Brisbane',
       temp: '',
       feelsLike: '',
       description: '',
       icon: '',
       hourlyForecast:[]
     };
+  }
+
+  componentDidMount(){
+    this.onFormSubmit();
   }
   
   onInputChange(e){

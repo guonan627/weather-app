@@ -1,5 +1,7 @@
 import React from "react";
-import {getCurrentWeather} from '../apis/open-weather-api.js';
+import { getCurrentWeather } from '../apis/open-weather-api.js';
+import './searchBar.scss';
+
 
 // this is a class component
 class SearchBar extends React.Component {
@@ -23,14 +25,15 @@ class SearchBar extends React.Component {
     const temp = 'this.state.temp';
 
     return (
-      <div>
-        <form onSubmit ={(e) => this.onFormSubmit(e)} >
+      <div className="search-bar">
+        <form className="search-bar__form" onSubmit ={(e) => this.onFormSubmit(e)} >
           {/* {location} */}
-          <button type="submit">Search</button>
+          <button className="search-bar__button" type="submit">Search</button>
           <input 
             id="search" 
             name="search" 
             value={location}  
+            className="search-bar__input"
             onChange={ (e) => this.onInputChange(e)}
           >
           </input>

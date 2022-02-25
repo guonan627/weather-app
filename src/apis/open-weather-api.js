@@ -11,7 +11,7 @@ function getCurrentWeather(location) {
 
 function getForecast(lat, lon){
   return axios.get(
-    `onecall?lat=${lat}&lon=${lon}&${appIdQueryParm}`
+    `onecall?lat=${lat}&lon=${lon}&units=imperial&${appIdQueryParm}`
   );
 }
 

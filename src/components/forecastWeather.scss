@@ -11,9 +11,11 @@
     margin-bottom: 7px;
   }
   &-items{
-    overflow: auto;
-    white-space: nowrap;
-    // overflow-y: hidden;
+    // white-space: nowrap;
+    // overflow: auto;
+    display:-webkit-flex;
+    overflow-x: scroll;
+
     // /* width */
     // &::-webkit-scrollbar {
     //   width: 10px;
@@ -50,9 +52,6 @@
     }
     &__hour{
       color: #b4b4b4;
-    }
-    &__description{
-
     }
   }
 }
